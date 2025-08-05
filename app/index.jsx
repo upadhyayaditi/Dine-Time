@@ -15,7 +15,7 @@ export default function Index() {
       }}
     >
       <Text className="text-purple-400 text-2xl">Edit app/index.tsx to edit this screen.</Text>
-      <TouchableOpacity onPress={()=> router.push("/testing")} >
+      <TouchableOpacity onPress={()=> router.push("/home")} >
         <Text>
           change route
         </Text>
