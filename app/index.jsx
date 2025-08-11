@@ -26,7 +26,7 @@ export default function Index() {
             >
               <Text className="text-base font-semibold text-center ">
                 Sign Up
-              </Text>
+              </Text> 
             </TouchableOpacity>
           </View>
         </View>
