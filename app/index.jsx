@@ -15,7 +15,7 @@ export default function Index() {
 
   return (
     <SafeAreaView className={`bg-[#2b2b2b]`}>
-      <StatusBar barStyle={"light-content"} backgroundColor={"#2b2b2b"} />
+      
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="m-2 flex justify-center items-center ">
           <Image source={logo} style={{ width: 300, height: 300 }} />
@@ -26,10 +26,38 @@ export default function Index() {
             >
               <Text className="text-base font-semibold text-center ">
                 Sign Up
-              </Text> 
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => router.push("/home")}
+              className="p-2 my-2 bg-[#2b2b2b] border border-[#f49b33] rounded-lg max-w-fit"
+            >
+              <Text className="text-base font-semibold text-[#f49b33] text-center ">
+                Guest User
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View>
+            <Text className="text-center text-lg font-semibold my-4 text-white">
+              <View className="border-b-2 border-[#f49b33] p-2 mb-1 w-24" /> or{" "}
+              <View className="border-b-2 border-[#f49b33] p-2 mb-1 w-24" />
+            </Text>
+            <TouchableOpacity
+            className="flex flex-row items-center "
+            onPress={() => router.push("/signin")}>
+              <Text className="text-white font-semibold ">
+                Already a User?{" "}
+              </Text>
+              <Text className="text-base underline font-semibold text-[#f49b33] text-center">
+                Sign In
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
+        <View className="flex-1">
+
+        </View>
+        <StatusBar barStyle={"light-content"} backgroundColor={"#2b2b2b"} />
       </ScrollView>
     </SafeAreaView>
   );
