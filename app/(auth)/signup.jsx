@@ -1,24 +1,16 @@
-import { useRouter } from "expo-router";
-import {
-  Image,
-  ScrollView,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Image, StatusBar } from 'react-native'
+import React from 'react'
 import { SafeAreaView } from "react-native-safe-area-context";
-import logo from "../assets/images/dinetimelogo.png";
-import entryImg from "../assets/images/Frame.png";
+import logo from "../../assets/images/dinetimelogo.png";
+import entryImg from "../../assets/images/Frame.png";
 
-export default function Index() {
-  const router = useRouter();
-
+const Signup = () => {
   return (
-    <SafeAreaView className={`bg-[#2b2b2b]`}>
+   <SafeAreaView className={`bg-[#2b2b2b]`}>
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View className="m-2 flex justify-center items-center ">
           <Image source={logo} style={{ width: 300, height: 300 }} />
+          <Text className="text-lg text-center text-white font-bold mb-10">Let's get you started</Text>
           <View className="w-3/4 ">
             <TouchableOpacity
               onPress={() => router.push("/signup")}
@@ -65,5 +57,7 @@ export default function Index() {
         <StatusBar barStyle={"light-content"} backgroundColor={"#2b2b2b"} />
       </ScrollView>
     </SafeAreaView>
-  );
+  )
 }
+
+export default Signup
