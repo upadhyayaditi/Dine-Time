@@ -55,7 +55,7 @@ const Signup = () => {
                     </Text>
                   )}
 
-                  <Text className=" text-[#f49b33] mt-4 mb-2" >Password</Text>
+                  <Text className=" text-[#f49b33] mt-4 mb-2">Password</Text>
                   <TextInput
                     className="h-10 border border-white text-white rounded  px-2 "
                     secureTextEntry
