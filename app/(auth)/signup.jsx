@@ -12,6 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/images/dinetimelogo.png";
 import entryImg from "../../assets/images/Frame.png";
 import { Formik } from "formik";
+import validationSchema from "../../utils/signupSchema";
 
 const Signup = () => {
   const handleSignup = () => {};
@@ -28,7 +29,7 @@ const Signup = () => {
           <View className="w-5/6">
             <Formik
               initialValues={{ email: "", password: "" }}
-              validationSchema={""}
+              validationSchema={validationSchema}
               onSubmit={handleSignup}
             >
               {({
