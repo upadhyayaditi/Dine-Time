@@ -88,9 +88,7 @@ const Signup = () => {
                 className="flex flex-row my-5 p-2 justify-center items-center "
                 onPress={() => router.push("/signup")}
               >
-                <Text className="text-white font-semibold ">
-                  New User?{" "}
-                </Text>
+                <Text className="text-white font-semibold ">New User? </Text>
                 <Text className="text-base underline font-semibold text-[#f49b33] text-center">
                   Sign Up
                 </Text>
