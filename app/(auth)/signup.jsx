@@ -7,6 +7,7 @@ import {
   Image,
   StatusBar,
 } from "react-native";
+import { useRouter } from "expo-router";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/images/dinetimelogo.png";
@@ -15,6 +16,7 @@ import { Formik } from "formik";
 import validationSchema from "../../utils/signupSchema";
 
 const Signup = () => {
+  const router = useRouter();
   const handleSignup = () => {};
 
   return (
@@ -81,6 +83,19 @@ const Signup = () => {
                 </View>
               )}
             </Formik>
+            <View>
+              <TouchableOpacity
+              className="flex flex-row my-5 p-2 justify-center items-center "
+              onPress={() => router.push("/signin")}
+            >
+              <Text className="text-white font-semibold ">
+                Already a User?{" "}
+              </Text>
+              <Text className="text-base underline font-semibold text-[#f49b33] text-center">
+                Sign In
+              </Text>
+            </TouchableOpacity>
+            </View>
           </View>
         </View>
         <View className="flex-1">
