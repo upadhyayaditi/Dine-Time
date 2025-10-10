@@ -13,7 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import logo from "../../assets/images/dinetimelogo.png";
 import entryImg from "../../assets/images/Frame.png";
 import { Formik } from "formik";
-import validationSchema from "../../utils/signupSchema";
+import validationSchema from "../../utils/authSchema";
 
 const Signup = () => {
   const router = useRouter();
@@ -85,16 +85,16 @@ const Signup = () => {
             </Formik>
             <View>
               <TouchableOpacity
-              className="flex flex-row my-5 p-2 justify-center items-center "
-              onPress={() => router.push("/signin")}
-            >
-              <Text className="text-white font-semibold ">
-                Already a User?{" "}
-              </Text>
-              <Text className="text-base underline font-semibold text-[#f49b33] text-center">
-                Sign In
-              </Text>
-            </TouchableOpacity>
+                className="flex flex-row my-5 p-2 justify-center items-center "
+                onPress={() => router.push("/signin")}
+              >
+                <Text className="text-white font-semibold ">
+                  Already a User?{" "}
+                </Text>
+                <Text className="text-base underline font-semibold text-[#f49b33] text-center">
+                  Sign In
+                </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
